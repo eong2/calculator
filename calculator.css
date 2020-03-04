@@ -1,0 +1,15 @@
+table{
+  border: 1px solid;
+  width: 200px;
+  height: 300px;
+  table-layout: fixed;
+  text-align: center;
+}
+td{
+  border: 1px solid;
+
+}
+.display{
+  text-align: right;
+  overflow: hidden;
+}
