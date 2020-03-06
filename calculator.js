@@ -19,13 +19,7 @@ for(var i=0;i<bt.length;i++) {
 
 function showValue(){//=버튼 클릭 함수->결과칸에 결과값 전달
   acc = eval(acc);
-  if(Number.isInteger(acc)===true){
-    value.innerHTML = acc;
-  }
-  else{
-    value.innerHTML = acc.toFixed(4);
-  }
-
+  value.innerHTML = Number.isInteger(acc) ? acc : acc.toFixed(4);
 };
 eq.addEventListener("click", showValue);
 
