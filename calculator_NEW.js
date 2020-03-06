@@ -13,13 +13,19 @@ function accumulation(input){ //숫자, 기호 버튼 클릭 함수->acc변수�
 for(var i=0;i<bt.length;i++) {
   const buttonEl = bt[i];
   buttonEl.addEventListener("click", function () {
-    accumulation(buttonEl.innerText);
+    accumulation(buttonEl.innerText); 
   });
 }
 
 function showValue(){//=버튼 클릭 함수->결과칸에 결과값 전달
   acc = eval(acc);
-  value.innerHTML = acc;
+  if(Number.isInteger(acc)===true){
+    value.innerHTML = acc;
+  }
+  else{
+    value.innerHTML = acc.toFixed(4);
+  }
+
 };
 eq.addEventListener("click", showValue);
 
@@ -29,3 +35,4 @@ function acFunction() {//AC버튼 클릭 함수->결과 칸 공백으로 만들�
   acc = "";
 };
 ac.addEventListener("click", acFunction);
+
