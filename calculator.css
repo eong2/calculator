@@ -1,15 +1,54 @@
+@font-face{
+  font-family:'digital-clock-font';
+  src: url(digital.ttf);
+ }
 table{
   border: 1px solid;
-  width: 200px;
-  height: 300px;
+  border-style: outset;
+  width: 240px;
+  height: 360px;
   table-layout: fixed;
   text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #DDDDDB;
+  font-family: sans-serif;
+  font-size: 25px;
+  float: right;
 }
 td{
   border: 1px solid;
-
+  border-style: outset;
+  border-radius: 7px;
+  color: white;
 }
 .display{
   text-align: right;
   overflow: hidden;
+  height: 40px;
+  font-family: 'digital-clock-font';
+  font-size: 30px;
+  color: #0A0A0F;
+  background-color: #AEBEA4;
+}
+body{
+  background-color: rgba(208, 255, 0, 0.5);
+  background-image: url(back.jpg);
+  background-size: cover;
+  background-blend-mode: difference;
+}
+#AC{
+  background-color: #811F26;
+}
+#AC:active{
+  background-color: rgb(85, 20, 25);
+  transition: 0.2s;
+}
+.bt, #eq{
+  background-color: rgb(143, 143, 143);
+}
+.bt:active, #eq:active{
+  border-style: inset;
+  background-color: rgb(80, 80, 80);
+  transition: 0.2s;
 }
